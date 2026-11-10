@@ -5,300 +5,349 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Enpal Brasil em Uberlândia</title>
 <meta name="description" content="Projeto Brasil (ESPM, 2026.2): proposta ao investidor para trazer a Enpal, de energia solar por aluguel sem entrada, para Uberlândia (MG).">
+<meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F3A5C'/%3E%3Cg fill='%23F0B323'%3E%3Crect x='6' y='6' width='9' height='9' rx='1.5'/%3E%3Crect x='17' y='6' width='9' height='9' rx='1.5' opacity='.55'/%3E%3Crect x='6' y='17' width='9' height='9' rx='1.5' opacity='.55'/%3E%3Crect x='17' y='17' width='9' height='9' rx='1.5' opacity='.3'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23000'/%3E%3Cg fill='%23fff'%3E%3Crect x='6' y='6' width='9' height='9' rx='1.5'/%3E%3Crect x='17' y='6' width='9' height='9' rx='1.5' opacity='.6'/%3E%3Crect x='6' y='17' width='9' height='9' rx='1.5' opacity='.6'/%3E%3Crect x='17' y='17' width='9' height='9' rx='1.5' opacity='.3'/%3E%3C/g%3E%3C/svg%3E">
 <style>
 :root{
-  --cal:#F3F5F1;
-  --cal-2:#E7ECE5;
-  --tinta:#172623;
-  --tinta-2:#46534F;
-  --silicio:#1F3A5C;
-  --silicio-2:#2C5280;
-  --silicio-claro:#DCE6EE;
-  --ipe:#F0B323;
-  --ipe-claro:#FBEBC2;
-  --cerrado:#5F7044;
-  --cerrado-claro:#E2E8D6;
-  --linha:#C9D2CB;
-  --fundo-cartao:#FFFFFF;
-  --mede:68ch;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --cal:#121A19; --cal-2:#1A2422; --tinta:#E9EEEA; --tinta-2:#A9B5B0;
-    --silicio:#9DB9D9; --silicio-2:#BBD0E8; --silicio-claro:#1D2C3D;
-    --ipe:#F3BE3E; --ipe-claro:#3A3018; --cerrado:#A9BC8A; --cerrado-claro:#243020;
-    --linha:#2E3B38; --fundo-cartao:#18211F;
-  }
-}
-:root[data-theme="dark"]{
-  --cal:#121A19; --cal-2:#1A2422; --tinta:#E9EEEA; --tinta-2:#A9B5B0;
-  --silicio:#9DB9D9; --silicio-2:#BBD0E8; --silicio-claro:#1D2C3D;
-  --ipe:#F3BE3E; --ipe-claro:#3A3018; --cerrado:#A9BC8A; --cerrado-claro:#243020;
-  --linha:#2E3B38; --fundo-cartao:#18211F;
+  --preto:#000;
+  --grafite:#141414;
+  --cinza-9:#2A2A2A;
+  --cinza-6:#5E5E5E;
+  --cinza-4:#8F8F8F;
+  --cinza-2:#D9D9D9;
+  --cinza-1:#EDEDED;
+  --papel:#F6F6F6;
+  --branco:#FFF;
+  --mede:66ch;
+  --facil:cubic-bezier(.2,.7,.2,1);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--cal);color:var(--tinta);font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 100;font-size:1.0625rem;line-height:1.6;font-feature-settings:"tnum" 0}
+body{margin:0;background:var(--branco);color:var(--preto);font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 100;font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
 img,svg{display:block;max-width:100%}
-a{color:var(--silicio-2);text-underline-offset:.18em;text-decoration-thickness:1px}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
 a:hover{text-decoration-thickness:2px}
-:focus-visible{outline:3px solid var(--ipe);outline-offset:3px;border-radius:3px}
+:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
 .num{font-variant-numeric:tabular-nums lining-nums}
 
-/* Tipografia */
-h1,h2,h3{font-variation-settings:"wdth" 120;line-height:1.05;letter-spacing:-.015em;margin:0}
-h1{font-weight:850;font-size:clamp(2.4rem,6.2vw,4.9rem);letter-spacing:-.025em}
-h2{font-weight:800;font-size:clamp(1.85rem,3.8vw,2.85rem)}
-h3{font-weight:700;font-size:1.25rem;line-height:1.2;font-variation-settings:"wdth" 110}
+h1,h2,h3{font-variation-settings:"wdth" 120;line-height:1.02;letter-spacing:-.02em;margin:0}
+h1{font-weight:850;font-size:clamp(2.7rem,7vw,6rem);letter-spacing:-.035em}
+h2{font-weight:800;font-size:clamp(2rem,4.4vw,3.4rem);letter-spacing:-.03em}
+h3{font-weight:700;font-size:1.2rem;line-height:1.2;font-variation-settings:"wdth" 108;letter-spacing:-.01em}
 p{margin:0 0 1em;max-width:var(--mede)}
-.lead{font-size:clamp(1.15rem,1.7vw,1.35rem);line-height:1.5;color:var(--tinta-2);max-width:56ch}
-.pergunta{font-variation-settings:"wdth" 85;font-weight:500;color:var(--tinta-2);font-size:1rem;margin:0 0 .9rem}
+.lead{font-size:clamp(1.12rem,1.6vw,1.3rem);line-height:1.5;color:var(--cinza-6);max-width:54ch}
+.suave{color:var(--cinza-6)}
 
-/* Estrutura */
-.casca{width:min(1180px,100% - 32px);margin-inline:auto}
-section{padding:clamp(64px,9vw,120px) 0;border-top:1px solid var(--linha)}
-.cabeca{display:grid;gap:18px;margin-bottom:clamp(32px,5vw,56px);max-width:860px}
+.casca{width:min(1160px,100% - 32px);margin-inline:auto}
+section{padding:clamp(72px,10vw,136px) 0;position:relative}
+section + section::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(1160px,100% - 32px);height:1px;background:linear-gradient(90deg,transparent,var(--cinza-2) 20%,var(--cinza-2) 80%,transparent)}
+.escura + section::before,.escura::before{display:none}
+.cabeca{display:grid;gap:20px;margin-bottom:clamp(40px,6vw,72px);max-width:880px}
+
+/* Gradiente no texto dos títulos */
+.grad{background:linear-gradient(180deg,var(--preto) 30%,#6b6b6b 120%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.escura .grad{background:linear-gradient(180deg,#fff 25%,#7d7d7d 125%);-webkit-background-clip:text;background-clip:text}
+
+/* Seções escuras */
+.escura{background:var(--preto);color:var(--branco);overflow:hidden}
+.escura::after{content:"";position:absolute;inset:-20% -10% auto;height:120%;background:radial-gradient(60% 50% at 70% 0%,rgba(255,255,255,.13),transparent 70%);pointer-events:none}
+.escura > .casca{position:relative;z-index:1}
+.escura .lead,.escura .suave{color:#A8A8A8}
+
+/* Barra de progresso */
+.progresso{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#000,#8a8a8a,#000);z-index:30}
 
 /* Navegação */
-.topo{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--cal) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+.topo{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.78);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid rgba(0,0,0,.07);transition:background .3s,border-color .3s,color .3s}
+.topo.sobre-escuro{background:rgba(0,0,0,.6);border-bottom-color:rgba(255,255,255,.1);color:#fff}
 .topo .casca{display:flex;align-items:center;gap:20px;height:60px}
-.marca{display:flex;align-items:center;gap:10px;font-weight:800;font-variation-settings:"wdth" 118;text-decoration:none;color:var(--tinta);white-space:nowrap;font-size:1rem}
+.marca{display:flex;align-items:center;gap:10px;font-weight:800;font-variation-settings:"wdth" 118;text-decoration:none;white-space:nowrap;font-size:1rem}
 .marca svg{width:22px;height:22px}
-.menu{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto;mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.menu{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto;mask-image:linear-gradient(90deg,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)}
 .menu::-webkit-scrollbar{display:none}
-.menu a{white-space:nowrap;text-decoration:none;color:var(--tinta-2);font-size:.92rem;padding:7px 11px;border-radius:999px;font-variation-settings:"wdth" 92}
-.menu a:hover{color:var(--tinta);background:var(--cal-2)}
-.menu a[aria-current="true"]{color:var(--cal);background:var(--silicio)}
-@media (max-width:720px){.marca span{display:none}.menu{mask-image:linear-gradient(90deg,#000 80%,transparent)}}
+.menu a{white-space:nowrap;text-decoration:none;opacity:.6;font-size:.9rem;padding:7px 12px;border-radius:999px;font-variation-settings:"wdth" 92;transition:opacity .2s,background .25s,color .25s}
+.menu a:hover{opacity:1}
+.menu a[aria-current="true"]{opacity:1;background:var(--preto);color:var(--branco)}
+.topo.sobre-escuro .menu a[aria-current="true"]{background:#fff;color:#000}
+@media (max-width:720px){.marca span{display:none}.menu{mask-image:linear-gradient(90deg,#000 78%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 78%,transparent)}}
 
 /* Hero */
-.hero{border-top:0;padding:clamp(40px,7vw,96px) 0 clamp(56px,8vw,104px)}
-.hero .casca{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:center}
-.hero h1{max-width:12ch}
-.hero .lead{margin-top:26px}
-.contexto{font-size:.95rem;color:var(--tinta-2);margin:0 0 22px;font-variation-settings:"wdth" 90}
-.botoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.botao{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:10px;font-weight:650;text-decoration:none;font-size:1rem;border:1.5px solid var(--silicio);color:var(--silicio)}
-.botao.cheio{background:var(--silicio);color:var(--cal)}
-.botao:hover{transform:translateY(-1px)}
-.painel-wrap{position:relative}
-.painel{width:100%;aspect-ratio:8/5.6;background:#1F3A5C;outline:1px solid #3A5A80;outline-offset:-1px;border-radius:14px;padding:3.2%;box-shadow:0 1px 0 var(--linha),0 30px 60px -30px color-mix(in srgb,var(--silicio) 60%,transparent);transform:perspective(1200px) rotateX(10deg) rotateZ(-2deg)}
-.painel svg{width:100%;height:100%}
-.celula{fill:#2C5280;transition:fill .3s}
-.celula.acesa{fill:#F0B323}
-.legenda-painel{font-size:.9rem;color:var(--tinta-2);margin-top:26px;max-width:40ch;font-variation-settings:"wdth" 90}
-@media (max-width:860px){.hero .casca{grid-template-columns:1fr}.painel{transform:none}}
+.hero{min-height:calc(100svh - 60px);display:flex;align-items:center;padding:clamp(48px,8vw,96px) 0}
+.hero::after{background:radial-gradient(50% 60% at 78% 40%,rgba(255,255,255,.16),transparent 70%),radial-gradient(40% 40% at 10% 100%,rgba(255,255,255,.06),transparent 70%);animation:deriva 14s ease-in-out infinite alternate}
+@keyframes deriva{to{transform:translate3d(-4%,3%,0) scale(1.05)}}
+.hero .casca{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,80px);align-items:center;width:min(1160px,100% - 32px)}
+.hero h1{max-width:11ch}
+.hero h1 .w{display:inline-block;padding-bottom:.06em;background:linear-gradient(180deg,#fff 30%,#8a8a8a 130%);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;transform:translateY(.5em);animation:sobe .9s var(--facil) forwards;animation-delay:calc(var(--i) * 90ms + 150ms)}
+@keyframes sobe{to{opacity:1;transform:none}}
+.hero .lead{margin-top:28px}
+.contexto{font-size:.92rem;color:#9a9a9a;margin:0 0 26px;font-variation-settings:"wdth" 90;display:inline-flex;align-items:center;gap:10px}
+.contexto::before{content:"";width:28px;height:1px;background:linear-gradient(90deg,transparent,#9a9a9a)}
+.botoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.botao{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:650;text-decoration:none;font-size:.98rem;border:1px solid rgba(255,255,255,.28);color:#fff;transition:background .25s,color .25s,border-color .25s,transform .25s var(--facil)}
+.botao:hover{transform:translateY(-2px);border-color:#fff}
+.botao.cheio{background:linear-gradient(180deg,#fff,#d6d6d6);color:#000;border-color:transparent}
+.fade-in{opacity:0;animation:aparece 1s var(--facil) forwards;animation-delay:var(--d,700ms)}
+@keyframes aparece{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.painel{width:100%;aspect-ratio:8/5.6;border-radius:18px;padding:3.2%;background:linear-gradient(160deg,#1d1d1d,#050505);border:1px solid rgba(255,255,255,.12);box-shadow:0 40px 80px -40px rgba(255,255,255,.18),inset 0 1px 0 rgba(255,255,255,.08);transform:perspective(1300px) rotateX(12deg) rotateY(-10deg) rotateZ(-1deg);position:relative;overflow:hidden}
+.painel::after{content:"";position:absolute;inset:-40%;background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.22) 50%,transparent 58%);transform:translateX(-60%);animation:brilho 5.5s ease-in-out 2.4s infinite}
+@keyframes brilho{0%{transform:translateX(-60%)}45%,100%{transform:translateX(60%)}}
+.painel svg{width:100%;height:100%;position:relative}
+.celula{fill:#1f1f1f;stroke:rgba(255,255,255,.07);transition:fill .5s}
+.celula.acesa{fill:#f2f2f2}
+.celula.morna{fill:#3a3a3a}
+.legenda-painel{font-size:.88rem;color:#8f8f8f;margin-top:28px;max-width:40ch;font-variation-settings:"wdth" 90}
+.rolar{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:1px;height:46px;background:linear-gradient(180deg,transparent,#fff);opacity:.5;z-index:1;animation:pulso 2.4s ease-in-out infinite}
+@keyframes pulso{0%,100%{transform:translateX(-50%) scaleY(.4);transform-origin:top}50%{transform:translateX(-50%) scaleY(1);transform-origin:top}}
+@media (max-width:860px){.hero .casca{grid-template-columns:1fr}.painel{transform:none}.rolar{display:none}.hero{min-height:0}}
+
+/* Revelar ao rolar */
+.js [data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .9s var(--facil),transform .9s var(--facil);transition-delay:var(--d,0ms)}
+.js [data-reveal].visto{opacity:1;transform:none}
 
 /* Resumo */
-.resumo-grade{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--linha);border-radius:16px;overflow:hidden;background:var(--fundo-cartao)}
-.resumo-grade > div{padding:28px 26px;border-right:1px solid var(--linha)}
-.resumo-grade > div:last-child{border-right:0}
-.resumo-grade h3{margin-bottom:10px}
-.resumo-grade p{margin:0;color:var(--tinta-2);font-size:1rem}
-.rotulo{display:block;font-size:.88rem;color:var(--cerrado);font-weight:650;margin-bottom:12px;font-variation-settings:"wdth" 92}
-.veredito{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;background:var(--ipe-claro);border-radius:16px;padding:26px}
-.veredito .selo{width:52px;height:52px;border-radius:50%;background:var(--ipe);display:grid;place-items:center;color:#172623}
-.veredito p{margin:0}
-.veredito strong{font-variation-settings:"wdth" 112}
-@media (max-width:860px){.resumo-grade{grid-template-columns:1fr}.resumo-grade > div{border-right:0;border-bottom:1px solid var(--linha)}.resumo-grade > div:last-child{border-bottom:0}}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px)}
+.tres h3{margin:14px 0 10px;font-size:1.35rem}
+.tres p{margin:0;color:var(--cinza-6);font-size:1rem}
+.rotulo{display:block;font-size:.85rem;color:var(--cinza-4);font-variation-settings:"wdth" 92}
+.tres > div{padding-top:22px;position:relative}
+.tres > div::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(90deg,#000,transparent)}
+.veredito{margin-top:clamp(48px,6vw,72px);display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;padding:30px 32px;border-radius:22px;background:linear-gradient(120deg,#000 0%,#2b2b2b 100%);color:#fff;position:relative;overflow:hidden}
+.veredito::after{content:"";position:absolute;inset:0;background:radial-gradient(40% 120% at 100% 0%,rgba(255,255,255,.18),transparent 70%)}
+.veredito > *{position:relative;z-index:1}
+.veredito .selo{width:52px;height:52px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center}
+.veredito p{margin:0;color:#cfcfcf;max-width:80ch}
+.veredito strong{color:#fff;font-variation-settings:"wdth" 112}
+.veredito a{color:#fff}
+@media (max-width:860px){.tres{grid-template-columns:1fr}.veredito{grid-template-columns:1fr;padding:26px}}
 
-/* Caminho do projeto */
-.etapas{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:etapa}
-.etapas li{position:relative;padding:26px 22px 0 0;border-top:3px solid var(--linha)}
-.etapas li.feita{border-top-color:var(--silicio)}
-.etapas li.agora{border-top-color:var(--ipe)}
-.etapas li::before{counter-increment:etapa;content:"Etapa " counter(etapa);display:block;font-size:.85rem;color:var(--tinta-2);margin-bottom:8px;font-variation-settings:"wdth" 92}
-.etapas li.final::before{content:"Entrega final"}
-.etapas h3{font-size:1.1rem;margin-bottom:8px}
-.etapas p{font-size:.97rem;color:var(--tinta-2)}
-@media (max-width:860px){.etapas{grid-template-columns:1fr 1fr;gap:28px 20px}}
+/* Caminho */
+.etapas{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:etapa;position:relative}
+.etapas::before{content:"";position:absolute;top:7px;left:0;right:0;height:1px;background:var(--cinza-2)}
+.etapas::after{content:"";position:absolute;top:7px;left:0;height:1px;width:100%;background:linear-gradient(90deg,#000 75%,#9a9a9a);transform-origin:0 50%;transform:scaleX(var(--p,0));transition:transform 1.6s var(--facil)}
+.etapas.visto::after{--p:1}
+.etapas li{position:relative;padding-top:36px}
+.etapas li::before{content:"";position:absolute;top:0;left:0;width:15px;height:15px;border-radius:50%;background:#fff;border:1px solid #000;z-index:1}
+.etapas li.agora::before{background:#000;box-shadow:0 0 0 6px rgba(0,0,0,.08)}
+.etapas .qual{display:block;font-size:.85rem;color:var(--cinza-4);margin-bottom:8px;font-variation-settings:"wdth" 92}
+.etapas h3{font-size:1.12rem;margin-bottom:8px}
+.etapas p{font-size:.97rem;color:var(--cinza-6)}
+@media (max-width:860px){.etapas{grid-template-columns:1fr 1fr;gap:30px 20px}.etapas::before,.etapas::after{display:none}}
 @media (max-width:520px){.etapas{grid-template-columns:1fr}}
 
 /* Brasil */
-.pestel{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linha);border:1px solid var(--linha);border-radius:16px;overflow:hidden}
-.pestel article{background:var(--fundo-cartao);padding:26px 24px 22px;display:flex;flex-direction:column}
-.pestel h3{margin-bottom:10px}
-.pestel p{font-size:.98rem;color:var(--tinta-2);margin-bottom:14px}
-.efeito{margin-top:auto;font-size:.93rem;padding-top:12px;border-top:1px dashed var(--linha);color:var(--tinta)}
-.efeito b{font-weight:650}
-.tag{display:inline-block;font-size:.8rem;font-weight:650;border-radius:999px;padding:2px 10px;margin-right:6px;font-variation-settings:"wdth" 92;vertical-align:1px}
-.tag.fav{background:var(--cerrado-claro);color:var(--cerrado)}
-.tag.ate{background:var(--ipe-claro);color:color-mix(in srgb,var(--ipe) 45%,var(--tinta))}
-@media (max-width:960px){.pestel{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.pestel{grid-template-columns:1fr}}
+.pestel{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.pestel article{padding:30px 28px 28px 0;display:flex;flex-direction:column;border-top:1px solid var(--cinza-1)}
+.pestel article:nth-child(-n+3){border-top:0}
+.pestel article:not(:nth-child(3n+1)){padding-left:28px;border-left:1px solid var(--cinza-1)}
+.pestel h3{margin-bottom:12px;font-size:1.3rem}
+.pestel p{font-size:.98rem;color:var(--cinza-6);margin-bottom:16px}
+.efeito{margin-top:auto;font-size:.92rem;color:var(--preto);line-height:1.9}
+.tag{display:inline-block;font-size:.76rem;font-weight:650;border-radius:999px;padding:1px 10px;margin-right:6px;font-variation-settings:"wdth" 92;vertical-align:1px;line-height:1.7}
+.tag.fav{background:#000;color:#fff}
+.tag.ate{border:1px solid #000;padding:0 9px}
+.escura .tag.fav{background:#fff;color:#000}
+.escura .tag.ate{border-color:#fff}
+@media (max-width:960px){.pestel{grid-template-columns:1fr 1fr}.pestel article,.pestel article:nth-child(-n+3){padding:26px 22px 24px 0;border-left:0;border-top:1px solid var(--cinza-1)}.pestel article:nth-child(-n+2){border-top:0}.pestel article:nth-child(even){padding-left:22px;border-left:1px solid var(--cinza-1)}}
+@media (max-width:600px){.pestel{grid-template-columns:1fr}.pestel article,.pestel article:nth-child(even){padding:24px 0;border-left:0}.pestel article:nth-child(2){border-top:1px solid var(--cinza-1)}}
 
 /* Região */
-.regiao{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(28px,5vw,64px);align-items:start}
-.ficha{margin:0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--linha)}
-.ficha div{padding:18px 16px 18px 0;border-bottom:1px solid var(--linha)}
-.ficha dt{font-size:.9rem;color:var(--tinta-2);font-variation-settings:"wdth" 92}
-.ficha dd{margin:4px 0 0;font-size:clamp(1.5rem,2.6vw,2rem);font-weight:780;font-variation-settings:"wdth" 115;font-variant-numeric:tabular-nums lining-nums;line-height:1.1}
-.ficha small{display:block;font-size:.8rem;color:var(--tinta-2);font-weight:400;margin-top:4px;font-variation-settings:"wdth" 92}
-.niveis{display:grid;gap:14px}
-.nivel{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:18px 20px;border-radius:14px;background:var(--fundo-cartao);border:1px solid var(--linha)}
+.ficha{margin:0 0 clamp(48px,6vw,72px);display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.ficha div{padding:26px 24px 26px 0;border-top:1px solid var(--cinza-1)}
+.ficha div:not(:nth-child(3n+1)){padding-left:24px;border-left:1px solid var(--cinza-1)}
+.ficha dt{font-size:.9rem;color:var(--cinza-6);font-variation-settings:"wdth" 92}
+.ficha dd{margin:8px 0 0;font-size:clamp(2rem,4.2vw,3.3rem);font-weight:800;font-variation-settings:"wdth" 118;font-variant-numeric:tabular-nums lining-nums;line-height:1;letter-spacing:-.03em;background:linear-gradient(180deg,#000 40%,#7a7a7a 130%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ficha small{display:block;font-size:.8rem;color:var(--cinza-4);margin-top:10px;font-variation-settings:"wdth" 92}
+.regiao{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
+.niveis{display:grid;gap:0}
+.nivel{display:grid;grid-template-columns:100px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--cinza-1)}
+.nivel:first-child{border-top:1px solid var(--cinza-1)}
 .nivel h3{font-size:1.05rem}
-.nivel p{margin:0;font-size:.98rem;color:var(--tinta-2)}
-.implica{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.implica div{border-left:3px solid var(--cerrado);padding-left:16px}
+.nivel p{margin:0;font-size:.98rem;color:var(--cinza-6)}
+.implica{display:grid;gap:22px}
+.implica div{padding-left:18px;position:relative}
+.implica div::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:1px;background:linear-gradient(180deg,#000,transparent)}
 .implica h3{font-size:1.05rem;margin-bottom:6px}
-.implica p{font-size:.97rem;color:var(--tinta-2);margin:0}
-.comparadas{margin-top:34px;font-size:.97rem;color:var(--tinta-2);background:var(--cal-2);border-radius:12px;padding:18px 20px;max-width:none}
-@media (max-width:960px){.regiao{grid-template-columns:1fr}.implica{grid-template-columns:1fr}}
-@media (max-width:480px){.nivel{grid-template-columns:1fr;gap:6px}.ficha{grid-template-columns:1fr}}
+.implica p{font-size:.97rem;color:var(--cinza-6);margin:0}
+.comparadas{margin-top:clamp(40px,5vw,56px);font-size:.97rem;color:var(--cinza-6);background:linear-gradient(90deg,var(--papel),transparent);border-radius:14px;padding:20px 22px;max-width:none}
+.comparadas b{color:#000}
+@media (max-width:960px){.regiao{grid-template-columns:1fr}.ficha{grid-template-columns:1fr 1fr}.ficha div,.ficha div:not(:nth-child(3n+1)){padding:22px 18px 22px 0;border-left:0}.ficha div:nth-child(even){padding-left:18px;border-left:1px solid var(--cinza-1)}}
+@media (max-width:480px){.nivel{grid-template-columns:1fr;gap:6px}.ficha{grid-template-columns:1fr}.ficha div:nth-child(even){padding-left:0;border-left:0}}
 
-/* Diamante */
-.diamante{display:grid;grid-template-columns:1fr minmax(240px,320px) 1fr;grid-template-rows:auto auto auto;gap:22px 30px;align-items:center}
+/* Diamante (seção escura) */
+.diamante{display:grid;grid-template-columns:1fr minmax(240px,330px) 1fr;grid-template-rows:auto auto auto;gap:24px 36px;align-items:center}
 .diamante .figura{grid-column:2;grid-row:1 / span 3;align-self:center}
-.vertice{background:var(--fundo-cartao);border:1px solid var(--linha);border-radius:14px;padding:20px 20px 16px}
-.vertice h3{font-size:1.08rem;margin-bottom:8px}
-.vertice ul{margin:0 0 10px;padding-left:18px;font-size:.95rem;color:var(--tinta-2)}
-.vertice li{margin-bottom:4px}
-.vertice .efeito{font-size:.9rem}
+.vertice{border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:22px 22px 18px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,0) 60%)}
+.vertice h3{font-size:1.08rem;margin-bottom:10px}
+.vertice ul{margin:0 0 12px;padding-left:18px;font-size:.95rem;color:#ababab}
+.vertice li{margin-bottom:5px}
+.vertice .efeito{color:#fff;font-size:.9rem;line-height:1.8}
 .v-top{grid-column:1;grid-row:1}
 .v-esq{grid-column:1;grid-row:2 / span 2}
 .v-dir{grid-column:3;grid-row:1 / span 2}
 .v-base{grid-column:3;grid-row:3}
-.externos{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.externos .vertice{background:transparent;border-style:dashed}
-.figura svg text{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 100}
+.externos{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.externos .vertice{background:none;border-style:dashed}
+.externos p{margin:0;color:#ababab;font-size:.96rem}
+.figura svg text{font-family:"Archivo",sans-serif}
+.figura .losango{stroke-dasharray:800;stroke-dashoffset:800;transition:stroke-dashoffset 2s var(--facil)}
+.figura .eixo{stroke-dasharray:272;stroke-dashoffset:272;transition:stroke-dashoffset 1.4s var(--facil) .9s}
+.figura .ponto{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(0);transition:opacity .5s,transform .7s var(--facil)}
+.figura .preenche{opacity:0;transition:opacity 1.4s ease .6s}
+.figura .rotulos{opacity:0;transition:opacity 1s ease 1.4s}
+.figura.visto .losango,.figura.visto .eixo{stroke-dashoffset:0}
+.figura.visto .ponto{opacity:1;transform:scale(1)}
+.figura.visto .preenche,.figura.visto .rotulos{opacity:1}
+.figura.visto .p1{transition-delay:1.2s}.figura.visto .p2{transition-delay:1.35s}.figura.visto .p3{transition-delay:1.5s}.figura.visto .p4{transition-delay:1.65s}
 @media (max-width:960px){
   .diamante{grid-template-columns:1fr 1fr}
-  .diamante .figura{grid-column:1 / -1;grid-row:1;max-width:300px;justify-self:center}
+  .diamante .figura{grid-column:1 / -1;grid-row:1;max-width:280px;justify-self:center}
   .v-top,.v-esq,.v-dir,.v-base{grid-column:auto;grid-row:auto}
 }
 @media (max-width:600px){.diamante,.externos{grid-template-columns:1fr}}
 
 /* Enpal */
-.empresa{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,64px)}
+.empresa{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,5vw,72px)}
 .fatos{margin:0}
-.fatos div{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--linha)}
-.fatos div:first-child{border-top:1px solid var(--linha)}
+.fatos div{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--cinza-1)}
+.fatos div:first-child{border-top:1px solid var(--cinza-1)}
 .fatos dt{font-weight:650;font-variation-settings:"wdth" 108}
-.fatos dd{margin:0;color:var(--tinta-2);font-size:.98rem}
-.descartadas{margin-top:26px;display:grid;gap:12px}
-.descartadas div{padding:16px 18px;border-radius:12px;background:var(--cal-2);font-size:.96rem;color:var(--tinta-2)}
-.descartadas b{color:var(--tinta)}
-.ponte{margin-top:26px;padding:20px 22px;border-radius:14px;background:var(--silicio-claro);font-size:.98rem}
+.fatos dd{margin:0;color:var(--cinza-6);font-size:.98rem}
+.descartadas{margin-top:28px;display:grid;gap:0}
+.descartadas div{padding:16px 0;border-top:1px solid var(--cinza-1);font-size:.96rem;color:var(--cinza-6)}
+.descartadas b{color:#000;text-decoration:line-through;text-decoration-thickness:1px}
+.ponte{margin-top:28px;padding:22px 24px;border-radius:18px;background:linear-gradient(135deg,var(--papel),#fff);border:1px solid var(--cinza-1);font-size:.98rem}
 .ponte p{margin:0}
 @media (max-width:860px){.empresa{grid-template-columns:1fr}}
 @media (max-width:480px){.fatos div{grid-template-columns:1fr;gap:4px}}
 
 /* OLI */
-.oli{display:grid;gap:18px}
-.oli article{display:grid;grid-template-columns:150px 1fr 1fr 1.1fr;gap:26px;padding:28px;border-radius:16px;background:var(--fundo-cartao);border:1px solid var(--linha);align-items:start}
-.letra{font-size:clamp(4rem,8vw,6.2rem);line-height:.8;font-weight:900;font-variation-settings:"wdth" 125;color:var(--silicio)}
-.letra small{display:block;font-size:1rem;font-weight:650;line-height:1.3;margin-top:14px;color:var(--tinta);font-variation-settings:"wdth" 100}
-.letra small i{font-weight:400;color:var(--tinta-2)}
-.oli h4{margin:0 0 8px;font-size:.88rem;font-weight:650;color:var(--cerrado);font-variation-settings:"wdth" 92}
-.oli p{font-size:.97rem;color:var(--tinta-2);margin:0}
-.oli .rec{background:var(--ipe-claro);border-radius:12px;padding:16px 18px;margin:-6px -6px -6px 0}
-.oli .rec p{color:var(--tinta)}
-.oli .rec ul{margin:0;padding-left:18px;font-size:.96rem}
-.oli .rec li{margin-bottom:5px}
-@media (max-width:1020px){.oli article{grid-template-columns:110px 1fr 1fr}.oli .rec{grid-column:1 / -1;margin:0}}
-@media (max-width:640px){.oli article{grid-template-columns:1fr;padding:22px}.letra{display:flex;align-items:baseline;gap:14px}.letra small{margin:0}}
+.oli{display:grid;gap:0}
+.oli article{display:grid;grid-template-columns:170px 1fr 1fr 1.1fr;gap:30px;padding:40px 0;border-top:1px solid var(--cinza-1);align-items:start}
+.oli article:last-child{border-bottom:1px solid var(--cinza-1)}
+.letra{font-size:clamp(4.6rem,9vw,7.4rem);line-height:.78;font-weight:900;font-variation-settings:"wdth" 125;background:linear-gradient(180deg,#000 30%,#bdbdbd 115%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.letra small{display:block;font-size:1rem;font-weight:650;line-height:1.3;margin-top:16px;color:#000;-webkit-text-fill-color:#000;font-variation-settings:"wdth" 100}
+.letra small i{font-weight:400;color:var(--cinza-6);-webkit-text-fill-color:var(--cinza-6)}
+.oli h4{margin:0 0 8px;font-size:.85rem;font-weight:600;color:var(--cinza-4);font-variation-settings:"wdth" 92}
+.oli p{font-size:.97rem;color:var(--cinza-6);margin:0}
+.oli .rec{background:linear-gradient(160deg,#000,#2a2a2a);color:#fff;border-radius:18px;padding:20px 22px}
+.oli .rec h4{color:#a3a3a3}
+.oli .rec ul{margin:0;padding-left:18px;font-size:.95rem;color:#e5e5e5}
+.oli .rec li{margin-bottom:6px}
+@media (max-width:1020px){.oli article{grid-template-columns:120px 1fr 1fr}.oli .rec{grid-column:1 / -1}}
+@media (max-width:640px){.oli article{grid-template-columns:1fr;gap:20px;padding:32px 0}.letra{display:flex;align-items:baseline;gap:14px}.letra small{margin:0}}
 
 /* Entrada */
-.fases{list-style:none;margin:0;padding:0;display:grid;gap:0}
-.fases li{display:grid;grid-template-columns:72px 1fr;gap:22px;padding-bottom:30px;position:relative}
-.fases li::before{content:"";position:absolute;left:23px;top:50px;bottom:0;width:2px;background:var(--linha)}
+.entrada{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:start}
+.fases{list-style:none;margin:0;padding:0}
+.fases li{display:grid;grid-template-columns:64px 1fr;gap:20px;padding-bottom:34px;position:relative}
+.fases li::before{content:"";position:absolute;left:21px;top:50px;bottom:6px;width:1px;background:linear-gradient(180deg,#000,var(--cinza-2))}
 .fases li:last-child::before{display:none}
-.fases .n{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:var(--silicio);color:var(--cal);font-variation-settings:"wdth" 115;font-size:1.15rem}
-.fases h3{margin:10px 0 8px}
-.fases p{color:var(--tinta-2);font-size:.99rem}
-.entrada{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,64px);align-items:start}
-.adapta{background:var(--fundo-cartao);border:1px solid var(--linha);border-radius:16px;padding:26px}
-.adapta h3{margin-bottom:16px}
-.adapta ul{list-style:none;margin:0;padding:0;display:grid;gap:16px}
-.adapta li{display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:.97rem;color:var(--tinta-2)}
-.adapta li b{color:var(--tinta);display:block;font-weight:650}
-.adapta svg{width:22px;height:22px;color:var(--cerrado);margin-top:2px}
+.fases .n{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;border:1px solid #000;font-variation-settings:"wdth" 115;font-size:1.05rem;transition:background .4s,color .4s}
+.fases li.visto .n{background:#000;color:#fff}
+.fases h3{margin:9px 0 8px}
+.fases p{color:var(--cinza-6);font-size:.99rem}
+.adapta{border-radius:22px;padding:30px;background:linear-gradient(160deg,var(--papel),#fff 70%);border:1px solid var(--cinza-1)}
+.adapta h3{margin-bottom:20px}
+.adapta ul{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.adapta li{display:grid;grid-template-columns:auto 1fr;gap:14px;font-size:.97rem;color:var(--cinza-6)}
+.adapta li b{color:#000;display:block;font-weight:650}
+.adapta svg{width:22px;height:22px;margin-top:2px}
 @media (max-width:860px){.entrada{grid-template-columns:1fr}}
 
 /* Alertas */
-.riscos{width:100%;border-collapse:collapse;font-size:.98rem;background:var(--fundo-cartao);border-radius:16px;overflow:hidden;border:1px solid var(--linha)}
-.riscos th,.riscos td{text-align:left;padding:18px 20px;vertical-align:top;border-bottom:1px solid var(--linha)}
-.riscos thead th{font-size:.88rem;color:var(--tinta-2);font-weight:600;background:var(--cal-2);font-variation-settings:"wdth" 92}
-.riscos tbody th{font-weight:650;width:30%;font-variation-settings:"wdth" 106}
-.riscos td{color:var(--tinta-2)}
-.riscos tr:last-child th,.riscos tr:last-child td{border-bottom:0}
-.grau{display:inline-block;margin-top:8px;font-size:.8rem;font-weight:650;padding:2px 10px;border-radius:999px;font-variation-settings:"wdth" 92}
-.grau.alto{background:var(--ipe);color:#172623}
-.grau.medio{background:var(--ipe-claro);color:var(--tinta)}
-.alertas{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.alertas div{border-top:3px solid var(--ipe);padding-top:16px}
+.riscos{width:100%;border-collapse:collapse;font-size:.98rem}
+.riscos th,.riscos td{text-align:left;padding:22px 20px 22px 0;vertical-align:top;border-bottom:1px solid var(--cinza-1)}
+.riscos thead th{font-size:.85rem;color:var(--cinza-4);font-weight:500;font-variation-settings:"wdth" 92;padding-top:0}
+.riscos tbody th{font-weight:650;width:38%;font-variation-settings:"wdth" 106}
+.riscos td{color:var(--cinza-6)}
+.grau{display:inline-block;margin-left:8px;font-size:.74rem;font-weight:650;padding:1px 9px;border-radius:999px;font-variation-settings:"wdth" 92;vertical-align:2px}
+.grau.alto{background:#000;color:#fff}
+.grau.medio{border:1px solid #000;padding:0 8px}
+.alertas{margin-top:clamp(40px,5vw,60px);display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.alertas div{padding:24px;border-radius:18px;background:linear-gradient(170deg,var(--papel),#fff 80%);border:1px solid var(--cinza-1)}
+.alertas svg{width:22px;height:22px;margin-bottom:14px}
 .alertas h3{font-size:1.05rem;margin-bottom:8px}
-.alertas p{font-size:.96rem;color:var(--tinta-2);margin:0}
+.alertas p{font-size:.95rem;color:var(--cinza-6);margin:0}
 @media (max-width:760px){
   .riscos thead{display:none}
   .riscos,.riscos tbody,.riscos tr,.riscos th,.riscos td{display:block;width:100%}
-  .riscos tr{border-bottom:1px solid var(--linha)}
-  .riscos tbody th{border-bottom:0;padding-bottom:4px;width:auto}
-  .riscos td{border-bottom:0;padding-top:4px}
+  .riscos tr{border-bottom:1px solid var(--cinza-1);padding:18px 0}
+  .riscos tbody th{border-bottom:0;padding:0 0 6px;width:auto}
+  .riscos td{border-bottom:0;padding:0}
   .alertas{grid-template-columns:1fr}
 }
 
 /* Entrevista */
-.entrevista{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,56px);align-items:start}
-.video{aspect-ratio:16/9;border-radius:16px;background:var(--silicio);color:#E8EEF5;display:grid;place-items:center;text-align:center;padding:24px;position:relative;overflow:hidden}
+.entrevista{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,64px);align-items:start}
+.video{aspect-ratio:16/9;border-radius:22px;background:radial-gradient(80% 90% at 30% 20%,#3a3a3a,#000 70%);color:#fff;display:grid;place-items:center;text-align:center;padding:24px;position:relative;overflow:hidden}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.video .aviso{max-width:34ch}
-.video .aviso svg{width:46px;height:46px;margin:0 auto 14px;color:var(--ipe)}
-.video .aviso p{margin:0 auto;color:#C9D6E4;font-size:.98rem}
+.video .aviso{max-width:34ch;position:relative}
+.video .play{width:64px;height:64px;border-radius:50%;border:1px solid rgba(255,255,255,.5);display:grid;place-items:center;margin:0 auto 16px;position:relative}
+.video .play::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid rgba(255,255,255,.6);animation:onda 2.6s ease-out infinite}
+@keyframes onda{from{transform:scale(1);opacity:.8}to{transform:scale(1.9);opacity:0}}
+.video .play svg{width:22px;height:22px;margin-left:3px}
+.video .aviso p{margin:0 auto;color:#b5b5b5;font-size:.96rem}
 .video .aviso strong{display:block;color:#fff;font-size:1.15rem;margin-bottom:6px;font-variation-settings:"wdth" 110}
+.pergunta{font-variation-settings:"wdth" 92;color:var(--cinza-4);font-size:.9rem;margin:0 0 10px}
 .roteiro{list-style:none;margin:0;padding:0;counter-reset:q}
-.roteiro li{counter-increment:q;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:13px 0;border-bottom:1px solid var(--linha);font-size:.98rem}
-.roteiro li::before{content:counter(q);font-weight:800;color:var(--silicio);font-variation-settings:"wdth" 115}
-.perfil{margin-top:20px;padding:18px 20px;border-radius:12px;background:var(--cal-2);font-size:.96rem;color:var(--tinta-2)}
+.roteiro li{counter-increment:q;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--cinza-1);font-size:.98rem}
+.roteiro li::before{content:counter(q, decimal-leading-zero);font-weight:700;color:var(--cinza-4);font-variation-settings:"wdth" 110;font-size:.9rem;padding-top:2px}
+.perfil{margin-top:22px;font-size:.95rem;color:var(--cinza-6)}
 .perfil p{margin:0}
 @media (max-width:860px){.entrevista{grid-template-columns:1fr}}
 
-/* Conclusão */
-.conclusao{background:var(--silicio);color:#EDF2F7;border-top:0}
-.conclusao h2{color:#fff;max-width:18ch}
-.conclusao .lead{color:#C7D5E4}
-.conclusao a{color:var(--ipe)}
-.condicoes{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.14);border-radius:16px;overflow:hidden}
-.condicoes div{background:var(--silicio);padding:24px}
-.condicoes h3{color:#fff;font-size:1.08rem;margin-bottom:8px}
-.condicoes p{color:#C7D5E4;font-size:.97rem;margin:0}
-.ods{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;color:#C7D5E4;font-size:.96rem}
-.ods span{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);color:#fff}
-.ods b{color:var(--ipe)}
-:root[data-theme="dark"] .conclusao,.conclusao{--x:0}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .conclusao{background:#1B2E45}:root:not([data-theme="light"]) .condicoes div{background:#1B2E45}}
-:root[data-theme="dark"] .conclusao,:root[data-theme="dark"] .condicoes div{background:#1B2E45}
+/* Conclusão (escura) */
+.conclusao h2{max-width:16ch}
+.condicoes{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.condicoes div{padding:26px;border-radius:20px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,0) 65%)}
+.condicoes h3{font-size:1.1rem;margin-bottom:8px}
+.condicoes p{color:#a8a8a8;font-size:.97rem;margin:0}
+.ods{margin-top:36px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:#9a9a9a;font-size:.95rem}
+.ods span{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:#fff}
+.ods .so{border:0;padding-left:4px;color:#8a8a8a}
 @media (max-width:860px){.condicoes{grid-template-columns:1fr}}
 
 /* IA e fontes */
-.ia-grade{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:22px}
-.ia-grade div{background:var(--fundo-cartao);border:1px solid var(--linha);border-radius:14px;padding:20px}
+.ia-grade{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-bottom:26px}
+.ia-grade div{padding:6px 24px 6px 0}
+.ia-grade div + div{padding-left:24px;border-left:1px solid var(--cinza-1)}
 .ia-grade h3{font-size:1.02rem;margin-bottom:8px}
-.ia-grade p{font-size:.95rem;color:var(--tinta-2);margin:0}
-@media (max-width:960px){.ia-grade{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.ia-grade{grid-template-columns:1fr}}
-.fontes{columns:2 340px;column-gap:44px;padding-left:20px;margin:0;font-size:.93rem;color:var(--tinta-2)}
+.ia-grade p{font-size:.95rem;color:var(--cinza-6);margin:0}
+@media (max-width:960px){.ia-grade{grid-template-columns:1fr 1fr;gap:28px 0}.ia-grade div:nth-child(3){padding-left:0;border-left:0}}
+@media (max-width:520px){.ia-grade{grid-template-columns:1fr}.ia-grade div + div{padding-left:0;border-left:0}}
+.fontes{columns:2 340px;column-gap:48px;padding-left:22px;margin:0;font-size:.92rem;color:var(--cinza-6)}
 .fontes li{break-inside:avoid;margin-bottom:12px}
-.fontes a{word-break:break-word}
+.fontes li::marker{color:var(--cinza-4)}
+.fontes a{word-break:break-word;color:#000}
 
-footer{border-top:1px solid var(--linha);padding:40px 0 56px;font-size:.93rem;color:var(--tinta-2)}
-footer .casca{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between}
+footer{background:var(--preto);color:#9a9a9a;padding:56px 0 64px;font-size:.92rem;position:relative;overflow:hidden}
+footer::after{content:"";position:absolute;inset:auto -10% -60% -10%;height:140%;background:radial-gradient(50% 50% at 50% 100%,rgba(255,255,255,.1),transparent 70%);pointer-events:none}
+footer .casca{display:flex;flex-wrap:wrap;gap:20px 48px;justify-content:space-between;position:relative;z-index:1}
 footer p{margin:0}
-footer b{color:var(--tinta)}
-.tema{background:none;border:1px solid var(--linha);color:var(--tinta-2);border-radius:999px;padding:6px 14px;font:inherit;font-size:.88rem;cursor:pointer}
+footer b{color:#fff}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .hero h1 .w,.fade-in{opacity:1;transform:none}
+  .js [data-reveal]{opacity:1;transform:none}
+  .figura .losango,.figura .eixo{stroke-dashoffset:0}
+  .figura .ponto,.figura .preenche,.figura .rotulos{opacity:1;transform:none}
+  .etapas::after{transform:scaleX(1)}
+}
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<div class="progresso" id="progresso" aria-hidden="true"></div>
 
-<header class="topo">
+<header class="topo" id="topo">
   <div class="casca">
     <a class="marca" href="#inicio" aria-label="Enpal Brasil, início">
-      <svg viewBox="0 0 22 22" aria-hidden="true"><rect width="22" height="22" rx="5" fill="var(--silicio)"/><rect x="4" y="4" width="6" height="6" rx="1" fill="var(--ipe)"/><rect x="12" y="4" width="6" height="6" rx="1" fill="var(--ipe)" opacity=".55"/><rect x="4" y="12" width="6" height="6" rx="1" fill="var(--ipe)" opacity=".55"/><rect x="12" y="12" width="6" height="6" rx="1" fill="var(--ipe)" opacity=".3"/></svg>
+      <svg viewBox="0 0 22 22" aria-hidden="true"><rect width="22" height="22" rx="6" fill="currentColor"/><g class="m-c"><rect x="4" y="4" width="6" height="6" rx="1" fill="var(--icone,#fff)"/><rect x="12" y="4" width="6" height="6" rx="1" fill="var(--icone,#fff)" opacity=".6"/><rect x="4" y="12" width="6" height="6" rx="1" fill="var(--icone,#fff)" opacity=".6"/><rect x="12" y="12" width="6" height="6" rx="1" fill="var(--icone,#fff)" opacity=".3"/></g></svg>
       <span>Enpal Brasil</span>
     </a>
     <nav class="menu" aria-label="Seções">
@@ -321,52 +370,53 @@ footer b{color:var(--tinta)}
 <main id="inicio">
 
 <!-- HERO -->
-<section class="hero" aria-labelledby="titulo">
+<section class="hero escura" id="hero" aria-labelledby="titulo">
   <div class="casca">
     <div>
-      <p class="contexto">Proposta de investimento estrangeiro direto, preparada por uma consultoria da ESPM para o investidor</p>
-      <h1 id="titulo">Sol no telhado, sem pagar a entrada</h1>
-      <p class="lead">Trazer para Uberlândia (MG) a Enpal, empresa alemã que instala energia solar em casas e pequenos negócios por uma mensalidade. O cliente não investe nada no começo; a empresa instala, mantém e financia o sistema.</p>
-      <div class="botoes">
+      <p class="contexto fade-in" style="--d:50ms">Proposta de investimento estrangeiro direto ao investidor</p>
+      <h1 id="titulo"><span class="w" style="--i:0">Sol</span> <span class="w" style="--i:1">no</span> <span class="w" style="--i:2">telhado,</span> <span class="w" style="--i:3">sem</span> <span class="w" style="--i:4">pagar</span> <span class="w" style="--i:5">a</span> <span class="w" style="--i:6">entrada</span></h1>
+      <p class="lead fade-in" style="--d:850ms">Trazer para Uberlândia (MG) a Enpal, empresa alemã que instala energia solar em casas e pequenos negócios por uma mensalidade. O cliente não investe nada no começo; a empresa instala, mantém e financia o sistema.</p>
+      <div class="botoes fade-in" style="--d:1050ms">
         <a class="botao cheio" href="#resumo">Ler o resumo</a>
         <a class="botao" href="#oli">Ver as recomendações</a>
       </div>
     </div>
-    <div class="painel-wrap">
+    <div class="fade-in" style="--d:400ms">
       <div class="painel" aria-hidden="true">
         <svg id="painel" viewBox="0 0 800 520" preserveAspectRatio="none"></svg>
       </div>
       <p class="legenda-painel">Cada uma das 40 células representa 2.500 sistemas: são os mais de 100 mil que a Enpal já instalou na Alemanha.</p>
     </div>
   </div>
+  <span class="rolar" aria-hidden="true"></span>
 </section>
 
 <!-- RESUMO -->
 <section id="resumo" aria-labelledby="t-resumo">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-resumo">A proposta em três decisões</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-resumo" class="grad">A proposta em três decisões</h2>
       <p class="lead">Este site apresenta ao investidor o local, o setor e a empresa escolhidos no Projeto Brasil, e explica por que a combinação faz sentido segundo o Diamante de Porter e o Paradigma Eclético de Dunning.</p>
     </div>
-    <div class="resumo-grade">
-      <div>
+    <div class="tres">
+      <div data-reveal style="--d:0ms">
         <span class="rotulo">Onde</span>
         <h3>Uberlândia, no Triângulo Mineiro</h3>
         <p>Cidade grande e de renda alta, polo logístico no cruzamento de três rodovias federais, num estado que é o 2º do país em geração solar distribuída.</p>
       </div>
-      <div>
+      <div data-reveal style="--d:120ms">
         <span class="rotulo">O quê</span>
         <h3>Energia solar residencial por aluguel</h3>
         <p>O sol é abundante e a conta de luz pesa. O que trava o consumidor é o custo de entrada com juros altos. O aluguel tira essa barreira.</p>
       </div>
-      <div>
+      <div data-reveal style="--d:240ms">
         <span class="rotulo">Como</span>
         <h3>Subsidiária própria, do zero</h3>
         <p>Investimento greenfield: a Enpal Brasil nasce em Uberlândia com sede, centro de distribuição e academia de instaladores, começando por um piloto.</p>
       </div>
     </div>
-    <div class="veredito">
-      <div class="selo" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <div class="veredito" data-reveal>
+      <div class="selo" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
       <p><strong>Nossa recomendação: investir, em etapas.</strong> A Enpal tem o que falta ao mercado solar residencial brasileiro, capital barato em escala e um processo industrializado de instalação. O investimento deve começar por um piloto no Triângulo Mineiro e só crescer depois que preço, inadimplência e tempo de instalação forem validados. <a href="#alertas">Veja os alertas</a>.</p>
     </div>
   </div>
@@ -375,15 +425,15 @@ footer b{color:var(--tinta)}
 <!-- CAMINHO -->
 <section aria-labelledby="t-caminho">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-caminho">Como chegamos aqui</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-caminho" class="grad">Como chegamos aqui</h2>
       <p class="lead">O Projeto Brasil foi construído em etapas ao longo do semestre. Cada uma estreitou a escolha anterior.</p>
     </div>
-    <ol class="etapas">
-      <li class="feita"><h3>Três cidades</h3><p>Uberlândia (MG), Maringá (PR) e Rio Verde (GO) foram analisadas como destinos possíveis.</p></li>
-      <li class="feita"><h3>Um setor</h3><p>Energia solar, lida pelo Diamante de Porter: forte em fatores naturais e demanda, travada pelo custo de entrada.</p></li>
-      <li class="feita"><h3>Uma empresa</h3><p>Enpal, depois de descartar a Next2Sun e a Sun'Agri. Justificativa pelo modelo OLI.</p></li>
-      <li class="agora final"><h3>Este site</h3><p>A apresentação ao investidor, com recomendações, alertas e a entrevista com um profissional do setor.</p></li>
+    <ol class="etapas" id="etapas">
+      <li data-reveal style="--d:0ms"><span class="qual">Etapa 1</span><h3>Três cidades</h3><p>Uberlândia (MG), Maringá (PR) e Rio Verde (GO) foram analisadas como destinos possíveis.</p></li>
+      <li data-reveal style="--d:150ms"><span class="qual">Etapa 2</span><h3>Um setor</h3><p>Energia solar, lida pelo Diamante de Porter: forte em fatores naturais e demanda, travada pelo custo de entrada.</p></li>
+      <li data-reveal style="--d:300ms"><span class="qual">Etapa 3</span><h3>Uma empresa</h3><p>Enpal, depois de descartar a Next2Sun e a Sun'Agri. Justificativa pelo modelo OLI.</p></li>
+      <li class="agora" data-reveal style="--d:450ms"><span class="qual">Entrega final</span><h3>Este site</h3><p>A apresentação ao investidor, com recomendações, alertas e a entrevista com um profissional do setor.</p></li>
     </ol>
   </div>
 </section>
@@ -391,37 +441,37 @@ footer b{color:var(--tinta)}
 <!-- BRASIL -->
 <section id="brasil" aria-labelledby="t-brasil">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-brasil">O Brasil para quem vende energia solar</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-brasil" class="grad">O Brasil para quem vende energia solar</h2>
       <p class="lead">Aspectos sociais, políticos, econômicos, tecnológicos, legais e ambientais que pesam sobre a energia solar residencial por aluguel.</p>
     </div>
     <div class="pestel">
-      <article>
+      <article data-reveal style="--d:0ms">
         <h3>Econômico</h3>
         <p>A Selic está em <span class="num">13,75%</span> ao ano: o Copom interrompeu os cortes em 4 de novembro de 2026, citando tensões no câmbio. Financiar a compra de um sistema solar continua caro.</p>
-        <p class="efeito"><span class="tag fav">Favorável</span>Juro alto afasta a compra financiada e valoriza quem oferece o sistema sem entrada. <span class="tag ate">Atenção</span>O real oscila frente ao euro.</p>
+        <p class="efeito"><span class="tag fav">Favorável</span>Juro alto afasta a compra financiada e valoriza a oferta sem entrada. <span class="tag ate">Atenção</span>O real oscila frente ao euro.</p>
       </article>
-      <article>
+      <article data-reveal style="--d:100ms">
         <h3>Social</h3>
         <p>A conta de luz pesa no orçamento das famílias e dos pequenos comércios, e as bandeiras tarifárias a encarecem nos meses de pouca chuva. A desigualdade de renda exige cuidado na análise de crédito.</p>
-        <p class="efeito"><span class="tag fav">Favorável</span>Economia na conta é um argumento de venda fácil de entender. <span class="tag ate">Atenção</span>Inadimplência.</p>
+        <p class="efeito"><span class="tag fav">Favorável</span>Economia na conta é um argumento fácil de entender. <span class="tag ate">Atenção</span>Inadimplência.</p>
       </article>
-      <article>
+      <article data-reveal style="--d:200ms">
         <h3>Político</h3>
         <p>As eleições de outubro de 2026 terminaram com a reeleição do presidente, o que dá continuidade às políticas atuais. A transição energética tem apoio amplo, e há cooperação oficial entre Brasil e Alemanha para qualificar trabalhadores.</p>
-        <p class="efeito"><span class="tag fav">Favorável</span>Ambiente previsível para um investimento de longo prazo. <span class="tag ate">Atenção</span>Pressão fiscal sobre juros e câmbio.</p>
+        <p class="efeito"><span class="tag fav">Favorável</span>Ambiente previsível para o longo prazo. <span class="tag ate">Atenção</span>Pressão fiscal sobre juros e câmbio.</p>
       </article>
-      <article>
+      <article data-reveal style="--d:0ms">
         <h3>Tecnológico</h3>
         <p>O Brasil já passou de <span class="num">75 GW</span> de potência solar, a maior parte em geração distribuída, em telhados e pequenas usinas (ABSOLAR, 2026). Há uma rede formada de integradores, instaladores e serviços de manutenção.</p>
-        <p class="efeito"><span class="tag fav">Favorável</span>Tecnologia conhecida pelo consumidor. A Enpal soma software de gestão de energia e monitoramento remoto.</p>
+        <p class="efeito"><span class="tag fav">Favorável</span>Tecnologia conhecida. A Enpal soma software de gestão de energia e monitoramento remoto.</p>
       </article>
-      <article>
+      <article data-reveal style="--d:100ms">
         <h3>Legal</h3>
         <p>A Lei 14.300/2022 reduz aos poucos a compensação da energia injetada na rede. A ANEEL não permite cobrar aluguel por kWh gerado. A reforma tributária (EC 132/2023) troca tributos do consumo por CBS e IBS entre 2026 e 2033.</p>
-        <p class="efeito"><span class="tag ate">Atenção</span>Mensalidade fixa, cálculo de economia pela Lei 14.300 e planejamento tributário durante a transição.</p>
+        <p class="efeito"><span class="tag ate">Atenção</span>Mensalidade fixa, economia calculada pela Lei 14.300 e planejamento tributário.</p>
       </article>
-      <article>
+      <article data-reveal style="--d:200ms">
         <h3>Ambiental</h3>
         <p>A matriz elétrica brasileira é <span class="num">88,2%</span> renovável (EPE, BEN 2025), mas depende muito das hidrelétricas. As secas recentes mostraram o valor de diversificar a geração.</p>
         <p class="efeito"><span class="tag fav">Favorável</span>Sistemas em telhado não ocupam área nova e ajudam os ODS 7 e 13.</p>
@@ -433,61 +483,68 @@ footer b{color:var(--tinta)}
 <!-- REGIÃO -->
 <section id="regiao" aria-labelledby="t-regiao">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-regiao">Uberlândia e o Triângulo Mineiro</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-regiao" class="grad">Uberlândia e o Triângulo Mineiro</h2>
       <p class="lead">O potencial do país, do estado e do município para o desenvolvimento humano, e o que isso significa para mão de obra, consumo e ambiente de negócios.</p>
     </div>
+    <dl class="ficha">
+      <div data-reveal style="--d:0ms"><dt>População</dt><dd data-count="713224">713.224</dd><small>Censo 2022; 768.339 estimados para 2026 (IBGE)</small></div>
+      <div data-reveal style="--d:100ms"><dt>PIB per capita</dt><dd data-count="71598" data-pre="R$ ">R$ 71.598</dd><small>IBGE, 2023</small></div>
+      <div data-reveal style="--d:200ms"><dt>IDHM</dt><dd data-count="0.789" data-dec="3">0,789</dd><small>Alto desenvolvimento humano (PNUD)</small></div>
+      <div data-reveal style="--d:0ms"><dt>Sol médio no Brasil</dt><dd data-count="5.15" data-dec="2" data-suf=" kWh">5,15 kWh</dd><small>Por m² ao dia, irradiação média (INPE)</small></div>
+      <div data-reveal style="--d:100ms"><dt>Solar distribuída em MG</dt><dd data-count="3.8" data-dec="1" data-suf=" GW">3,8 GW</dd><small>2º estado do país; R$ 19,6 bi investidos (ABSOLAR/ANEEL)</small></div>
+      <div data-reveal style="--d:200ms"><dt>Investimento privado atraído</dt><dd data-count="23" data-pre="R$ " data-suf=" bi">R$ 23 bi</dd><small>2025 até set/2026 (Diário do Comércio)</small></div>
+    </dl>
     <div class="regiao">
-      <dl class="ficha">
-        <div><dt>População</dt><dd class="num">713.224</dd><small>Censo 2022; 768.339 estimados para 2026 (IBGE)</small></div>
-        <div><dt>PIB per capita</dt><dd class="num">R$ 71.598</dd><small>IBGE, 2023</small></div>
-        <div><dt>IDHM</dt><dd class="num">0,789</dd><small>Alto desenvolvimento humano (PNUD)</small></div>
-        <div><dt>Sol médio no Brasil</dt><dd class="num">5,15 kWh/m²</dd><small>Por dia, irradiação média (INPE)</small></div>
-        <div><dt>Solar distribuída em MG</dt><dd class="num">3,8 GW</dd><small>2º estado do país; R$ 19,6 bi investidos (ABSOLAR/ANEEL)</small></div>
-        <div><dt>Investimento privado atraído</dt><dd class="num">R$ 23 bi+</dd><small>2025 até set/2026 (Diário do Comércio)</small></div>
-      </dl>
-      <div class="niveis">
+      <div class="niveis" data-reveal>
         <div class="nivel"><h3>País</h3><p>Sol abundante o ano todo, demanda crescente por geração distribuída e uma cadeia de engenharia e instalação já formada. O freio é o crédito caro.</p></div>
         <div class="nivel"><h3>Estado</h3><p>Minas Gerais é o 2º estado em geração solar distribuída, com 3,8 GW instalados, e oferece incentivos estaduais ao setor. A distribuidora local é a Cemig.</p></div>
         <div class="nivel"><h3>Município</h3><p>Maior cidade das três estudadas, renda alta e um dos maiores polos atacadistas e logísticos da América Latina, no cruzamento das BR-050, BR-365 e BR-452. Daqui se atende o Triângulo e parte do Centro-Oeste.</p></div>
       </div>
+      <div class="implica" data-reveal style="--d:150ms">
+        <div><h3>Mão de obra</h3><p>A Universidade Federal de Uberlândia (UFU) e as escolas técnicas da cidade formam engenheiros e eletricistas. A academia da Enpal completa a formação específica de instaladores.</p></div>
+        <div><h3>Consumo</h3><p>Renda e IDHM altos indicam famílias com casa própria, conta de luz relevante e capacidade de pagar uma mensalidade fixa.</p></div>
+        <div><h3>Ambiente de negócios</h3><p>A cidade atrai investimentos privados em ritmo forte; atualização posterior do mesmo jornal fala em R$ 30,4 bilhões anunciados desde janeiro de 2025. Mais empresas e moradores fazem a demanda por energia crescer.</p></div>
+      </div>
     </div>
-    <div class="implica">
-      <div><h3>Mão de obra</h3><p>A Universidade Federal de Uberlândia (UFU) e as escolas técnicas da cidade formam engenheiros e eletricistas. A academia da Enpal completa a formação específica de instaladores.</p></div>
-      <div><h3>Consumo</h3><p>Renda e IDHM altos indicam famílias com casa própria, conta de luz relevante e capacidade de pagar uma mensalidade fixa.</p></div>
-      <div><h3>Ambiente de negócios</h3><p>A cidade atrai investimentos privados em ritmo forte; atualização posterior do mesmo jornal fala em R$ 30,4 bilhões anunciados desde janeiro de 2025. Mais empresas e moradores fazem a demanda por energia crescer.</p></div>
-    </div>
-    <p class="comparadas"><b>Por que não as outras duas cidades.</b> Maringá tem um mercado solar mais maduro e disputado. Em Rio Verde, o cliente típico é o grande produtor rural, que costuma comprar a própria usina em vez de alugar um sistema residencial.</p>
+    <p class="comparadas" data-reveal><b>Por que não as outras duas cidades.</b> Maringá tem um mercado solar mais maduro e disputado. Em Rio Verde, o cliente típico é o grande produtor rural, que costuma comprar a própria usina em vez de alugar um sistema residencial.</p>
   </div>
 </section>
 
 <!-- DIAMANTE -->
-<section id="diamante" aria-labelledby="t-diamante">
+<section id="diamante" class="escura" aria-labelledby="t-diamante">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-diamante">Diamante de Porter do setor solar</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-diamante" class="grad">Diamante de Porter do setor solar</h2>
       <p class="lead">O diagnóstico da etapa 2, lido para a geração distribuída residencial em Uberlândia: contexto estratégico e de concorrência, demanda e indústrias de apoio.</p>
     </div>
     <div class="diamante">
-      <div class="figura" aria-hidden="true">
+      <div class="figura" id="figura" aria-hidden="true">
         <svg viewBox="0 0 300 300">
-          <polygon points="150,14 286,150 150,286 14,150" fill="var(--silicio-claro)" stroke="var(--silicio)" stroke-width="2"/>
-          <line x1="150" y1="14" x2="150" y2="286" stroke="var(--silicio)" stroke-width="1" stroke-dasharray="4 5" opacity=".5"/>
-          <line x1="14" y1="150" x2="286" y2="150" stroke="var(--silicio)" stroke-width="1" stroke-dasharray="4 5" opacity=".5"/>
-          <circle cx="150" cy="14" r="9" fill="var(--ipe)"/>
-          <circle cx="14" cy="150" r="9" fill="var(--cerrado)"/>
-          <circle cx="286" cy="150" r="9" fill="var(--cerrado)"/>
-          <circle cx="150" cy="286" r="9" fill="var(--cerrado)"/>
-          <text x="150" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="var(--tinta)">Energia solar</text>
-          <text x="150" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="var(--tinta)">distribuída</text>
-          <text x="150" y="168" text-anchor="middle" font-size="12.5" fill="var(--tinta-2)">Uberlândia (MG)</text>
-          <text x="150" y="44" text-anchor="middle" font-size="11.5" fill="var(--tinta-2)">Rivalidade</text>
-          <text x="40" y="154" font-size="11.5" fill="var(--tinta-2)">Fatores</text>
-          <text x="260" y="154" text-anchor="end" font-size="11.5" fill="var(--tinta-2)">Demanda</text>
-          <text x="150" y="264" text-anchor="middle" font-size="11.5" fill="var(--tinta-2)">Apoio</text>
+          <defs>
+            <linearGradient id="gL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+            <linearGradient id="gS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#6d6d6d"/></linearGradient>
+          </defs>
+          <polygon class="preenche" points="150,14 286,150 150,286 14,150" fill="url(#gL)"/>
+          <polygon class="losango" points="150,14 286,150 150,286 14,150" fill="none" stroke="url(#gS)" stroke-width="1.5"/>
+          <line class="eixo" x1="150" y1="14" x2="150" y2="286" stroke="#fff" stroke-width="1" opacity=".25"/>
+          <line class="eixo" x1="14" y1="150" x2="286" y2="150" stroke="#fff" stroke-width="1" opacity=".25"/>
+          <circle class="ponto p1" cx="150" cy="14" r="7" fill="#fff"/>
+          <circle class="ponto p2" cx="286" cy="150" r="7" fill="#fff"/>
+          <circle class="ponto p3" cx="150" cy="286" r="7" fill="#fff"/>
+          <circle class="ponto p4" cx="14" cy="150" r="7" fill="#fff"/>
+          <g class="rotulos">
+            <text x="150" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Energia solar</text>
+            <text x="150" y="141" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">distribuída</text>
+            <text x="150" y="168" text-anchor="middle" font-size="12" fill="#9a9a9a">Uberlândia (MG)</text>
+            <text x="150" y="48" text-anchor="middle" font-size="11" fill="#9a9a9a">Rivalidade</text>
+            <text x="38" y="146" font-size="11" fill="#9a9a9a">Fatores</text>
+            <text x="262" y="146" text-anchor="end" font-size="11" fill="#9a9a9a">Demanda</text>
+            <text x="150" y="260" text-anchor="middle" font-size="11" fill="#9a9a9a">Apoio</text>
+          </g>
         </svg>
       </div>
-      <article class="vertice v-top">
+      <article class="vertice v-top" data-reveal>
         <h3>Estratégia, estrutura e rivalidade</h3>
         <ul>
           <li>Gigantes globais (Enel Green Power, Canadian Solar) dominam as grandes usinas, que usam sociedades de propósito específico.</li>
@@ -495,7 +552,7 @@ footer b{color:var(--tinta)}
         </ul>
         <p class="efeito"><span class="tag ate">Atenção</span>Ninguém no residencial tem capital nem processo na escala da Enpal.</p>
       </article>
-      <article class="vertice v-esq">
+      <article class="vertice v-esq" data-reveal style="--d:120ms">
         <h3>Condições de fatores</h3>
         <ul>
           <li>Irradiação média de cerca de 5,15 kWh/m² por dia (INPE).</li>
@@ -504,7 +561,7 @@ footer b{color:var(--tinta)}
         </ul>
         <p class="efeito"><span class="tag fav">Forte</span>O ponto mais forte do ecossistema.</p>
       </article>
-      <article class="vertice v-dir">
+      <article class="vertice v-dir" data-reveal style="--d:60ms">
         <h3>Condições de demanda</h3>
         <ul>
           <li>Crescimento forte da geração distribuída para residências e comércio.</li>
@@ -513,7 +570,7 @@ footer b{color:var(--tinta)}
         </ul>
         <p class="efeito"><span class="tag fav">Forte</span>Demanda existe; falta um jeito de pagar.</p>
       </article>
-      <article class="vertice v-base">
+      <article class="vertice v-base" data-reveal style="--d:180ms">
         <h3>Indústrias correlatas e de apoio</h3>
         <ul>
           <li>Engenharia e construção (EPC) e montagem eletromecânica já consolidadas.</li>
@@ -524,13 +581,13 @@ footer b{color:var(--tinta)}
       </article>
     </div>
     <div class="externos">
-      <article class="vertice">
+      <article class="vertice" data-reveal>
         <h3>Governo</h3>
-        <p class="pergunta" style="margin:0 0 8px">Leilões regulados pela ANEEL, incentivos estaduais como a isenção de ICMS sobre equipamentos solares e regras de conexão da Lei 14.300 e da REN 1.098/2024.</p>
+        <p>Leilões regulados pela ANEEL, incentivos estaduais como a isenção de ICMS sobre equipamentos solares e regras de conexão da Lei 14.300 e da REN 1.098/2024.</p>
       </article>
-      <article class="vertice">
+      <article class="vertice" data-reveal style="--d:120ms">
         <h3>Acaso</h3>
-        <p class="pergunta" style="margin:0 0 8px">A crise hídrica dos últimos anos acelerou a diversificação da matriz e mostrou ao consumidor o custo de depender só das hidrelétricas.</p>
+        <p>A crise hídrica dos últimos anos acelerou a diversificação da matriz e mostrou ao consumidor o custo de depender só das hidrelétricas.</p>
       </article>
     </div>
   </div>
@@ -539,20 +596,20 @@ footer b{color:var(--tinta)}
 <!-- ENPAL -->
 <section id="enpal" aria-labelledby="t-enpal">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-enpal">Quem é a Enpal</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-enpal" class="grad">Quem é a Enpal</h2>
       <p class="lead">Startup de Berlim que se apresenta como líder do mercado solar residencial na Alemanha. Não tem filial, distribuidor nem projeto no Brasil.</p>
     </div>
     <div class="empresa">
-      <div>
+      <div data-reveal>
         <p>Avaliamos três empresas estrangeiras. A Enpal foi a escolhida porque é financeiramente sólida, já provou o modelo em grande escala e ataca a barreira que o Diamante apontou: o custo de entrada.</p>
         <div class="descartadas">
-          <div><b>Next2Sun (Alemanha), descartada.</b> Painéis verticais para fazendas. Pediu insolvência de duas subsidiárias em outubro de 2026, entre elas a de tecnologia.</div>
-          <div><b>Sun'Agri (França), descartada.</b> Agrivoltaica para uva, frutas e hortaliças, culturas pouco presentes no Triângulo Mineiro.</div>
+          <div><b>Next2Sun (Alemanha)</b>, descartada. Painéis verticais para fazendas. Pediu insolvência de duas subsidiárias em outubro de 2026, entre elas a de tecnologia.</div>
+          <div><b>Sun'Agri (França)</b>, descartada. Agrivoltaica para uva, frutas e hortaliças, culturas pouco presentes no Triângulo Mineiro.</div>
         </div>
-        <div class="ponte"><p><b>Uma ponte que já existe.</b> A academia da Enpal treina eletricistas estrangeiros dentro de acordos oficiais de cooperação, entre eles com o Brasil (Solarserver, 2026). A empresa já conhece a mão de obra brasileira.</p></div>
+        <div class="ponte"><p><strong>Uma ponte que já existe.</strong> A academia da Enpal treina eletricistas estrangeiros dentro de acordos oficiais de cooperação, entre eles com o Brasil (Solarserver, 2026). A empresa já conhece a mão de obra brasileira.</p></div>
       </div>
-      <dl class="fatos">
+      <dl class="fatos" data-reveal style="--d:150ms">
         <div><dt>Origem</dt><dd>Berlim, Alemanha. Mais de 100 mil sistemas instalados (Enpal, 2026).</dd></div>
         <div><dt>Modelo</dt><dd>Venda ou aluguel do sistema solar sem entrada, com bateria, carregador de carro elétrico, bomba de calor e tarifa de energia verde.</dd></div>
         <div><dt>Financiamento</dt><dd>Mais de € 5 bilhões em compromissos de financiamento até 2024, com BlackRock, ING e Barclays. Os sistemas ficam em sociedades de propósito específico que recebem as mensalidades. Em julho de 2026, levantou € 367 milhões numa securitização lastreada em cerca de 11.500 contratos.</dd></div>
@@ -566,24 +623,24 @@ footer b{color:var(--tinta)}
 <!-- OLI -->
 <section id="oli" aria-labelledby="t-oli">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-oli">Recomendações pelo Paradigma Eclético</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-oli" class="grad">Recomendações pelo Paradigma Eclético</h2>
       <p class="lead">Pelo modelo OLI de Dunning, uma empresa investe no exterior quando reúne três vantagens ao mesmo tempo. A Enpal reúne as três no Brasil.</p>
     </div>
     <div class="oli">
-      <article>
+      <article data-reveal>
         <div class="letra">O<small>Ownership <i>(propriedade)</i></small></div>
         <div><h4>O que a Enpal tem</h4><p>Know-how para financiar sistemas residenciais em escala, por sociedades de propósito específico e securitização. Processo padronizado de venda e instalação, repetido em mais de 100 mil casas. Academia própria, marca e software de gestão de energia.</p></div>
         <div><h4>Por que importa aqui</h4><p>As empresas locais de aluguel solar são pequenas e regionais. Nenhuma tem acesso a capital nessa escala nem um processo industrializado de instalação.</p></div>
         <div class="rec"><h4>Recomendação</h4><ul><li>Trazer o modelo de financiamento inteiro: uma sociedade de propósito específico brasileira que receba as mensalidades.</li><li>Captar parte do dinheiro em reais, com bancos e fundos locais, para casar dívida e receita.</li><li>Usar o software de monitoramento desde o primeiro cliente.</li></ul></div>
       </article>
-      <article>
+      <article data-reveal>
         <div class="letra">L<small>Location <i>(localização)</i></small></div>
         <div><h4>O que encontra em Uberlândia</h4><p>Renda alta, cidade grande, polo logístico, a UFU para formar técnicos, o 2º estado em geração distribuída e cerca de R$ 23 bilhões em investimentos privados atraídos entre 2025 e meados de 2026.</p></div>
         <div><h4>Por que importa aqui</h4><p>O sol é abundante e o consumidor quer reduzir a conta. O obstáculo é o custo de entrada com juros altos, exatamente o que o aluguel resolve. Minas oferece incentivos ao setor.</p></div>
         <div class="rec"><h4>Recomendação</h4><ul><li>Instalar em Uberlândia a sede operacional, o centro de distribuição e uma unidade da academia.</li><li>Fazer parcerias com a UFU e as escolas técnicas locais.</li><li>Atender primeiro o Triângulo e depois o Centro-Oeste, a partir do mesmo centro.</li></ul></div>
       </article>
-      <article>
+      <article data-reveal>
         <div class="letra">I<small>Internalization <i>(internalização)</i></small></div>
         <div><h4>A escolha</h4><p>Entrar com uma subsidiária própria em vez de licenciar a marca para um integrador local.</p></div>
         <div><h4>Por que importa aqui</h4><p>No aluguel, o sistema segue sendo da empresa por muitos anos e o retorno depende de a instalação durar e de as mensalidades serem pagas. Num mercado pulverizado, licenciar arriscaria a qualidade e a cobrança.</p></div>
@@ -596,22 +653,22 @@ footer b{color:var(--tinta)}
 <!-- ENTRADA -->
 <section id="entrada" aria-labelledby="t-entrada">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-entrada">Como seria a entrada</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-entrada" class="grad">Como seria a entrada</h2>
       <p class="lead">Investimento direto do tipo greenfield: a Enpal Brasil é criada do zero em Uberlândia e cresce por fases.</p>
     </div>
     <div class="entrada">
       <ol class="fases">
-        <li><span class="n">1</span><div><h3>Abrir a Enpal Brasil</h3><p>Sede operacional, centro de distribuição de equipamentos e uma unidade da academia de instaladores, em parceria com a UFU e com o ensino técnico local.</p></div></li>
-        <li><span class="n">2</span><div><h3>Rodar o piloto no Triângulo</h3><p>Residências e pequenos comércios da região, para testar o preço da mensalidade, a inadimplência e o tempo de instalação.</p></div></li>
-        <li><span class="n">3</span><div><h3>Expandir para o Centro-Oeste</h3><p>Só depois de o piloto validar os números, usando Uberlândia como centro logístico.</p></div></li>
+        <li data-reveal><span class="n">1</span><div><h3>Abrir a Enpal Brasil</h3><p>Sede operacional, centro de distribuição de equipamentos e uma unidade da academia de instaladores, em parceria com a UFU e com o ensino técnico local.</p></div></li>
+        <li data-reveal style="--d:150ms"><span class="n">2</span><div><h3>Rodar o piloto no Triângulo</h3><p>Residências e pequenos comércios da região, para testar o preço da mensalidade, a inadimplência e o tempo de instalação.</p></div></li>
+        <li data-reveal style="--d:300ms"><span class="n">3</span><div><h3>Expandir para o Centro-Oeste</h3><p>Só depois de o piloto validar os números, usando Uberlândia como centro logístico.</p></div></li>
       </ol>
-      <div class="adapta">
+      <div class="adapta" data-reveal style="--d:200ms">
         <h3>O que muda em relação à Alemanha</h3>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Mensalidade fixa</b>A ANEEL não permite cobrar o aluguel por kWh gerado, ao contrário do modelo alemão de pagar só quando o sistema produz.</div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5h10v2"/></svg><div><b>Painel e bateria</b>A bomba de calor tem pouca utilidade no clima quente do Triângulo e sai do pacote.</div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19h16M6 15l4-4 3 3 5-6"/></svg><div><b>Economia calculada pela Lei 14.300</b>A compensação da energia injetada na rede cai aos poucos, e a proposta ao cliente precisa mostrar isso.</div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Mensalidade fixa</b>A ANEEL não permite cobrar o aluguel por kWh gerado, ao contrário do modelo alemão de pagar só quando o sistema produz.</div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5h10v2"/></svg><div><b>Painel e bateria</b>A bomba de calor tem pouca utilidade no clima quente do Triângulo e sai do pacote.</div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 19h16M6 15l4-4 3 3 5-6"/></svg><div><b>Economia calculada pela Lei 14.300</b>A compensação da energia injetada na rede cai aos poucos, e a proposta ao cliente precisa mostrar isso.</div></li>
         </ul>
       </div>
     </div>
@@ -621,23 +678,23 @@ footer b{color:var(--tinta)}
 <!-- ALERTAS -->
 <section id="alertas" aria-labelledby="t-alertas">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-alertas">Riscos e alertas ao investidor</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-alertas" class="grad">Riscos e alertas ao investidor</h2>
       <p class="lead">O modelo tem riscos claros. Para cada um, a forma de reduzi-lo.</p>
     </div>
-    <table class="riscos">
+    <table class="riscos" data-reveal>
       <thead><tr><th scope="col">Risco</th><th scope="col">Como reduzir</th></tr></thead>
       <tbody>
-        <tr><th scope="row">Câmbio e custo do dinheiro<br><span class="grau alto">Alto</span></th><td>Captar parte do financiamento no Brasil, em reais, para que a dívida fique na mesma moeda das mensalidades.</td></tr>
-        <tr><th scope="row">Inadimplência do aluguel<br><span class="grau alto">Alto</span></th><td>Análise de crédito na venda, piloto antes de crescer e monitoramento remoto do sistema, que mostra quando algo para de funcionar.</td></tr>
-        <tr><th scope="row">Distribuidora negar a conexão por inversão de fluxo<br><span class="grau medio">Médio</span></th><td>Focar em sistemas residenciais de até 7,5 kW, que a ANEEL dispensou dessa análise (REN 1.098/2024).</td></tr>
-        <tr><th scope="row">Concorrência de integradores e de empresas locais de assinatura solar<br><span class="grau medio">Médio</span></th><td>Diferenciar pela escala, pelo processo padronizado de instalação e pela oferta sem entrada.</td></tr>
+        <tr><th scope="row">Câmbio e custo do dinheiro<span class="grau alto">Alto</span></th><td>Captar parte do financiamento no Brasil, em reais, para que a dívida fique na mesma moeda das mensalidades.</td></tr>
+        <tr><th scope="row">Inadimplência do aluguel<span class="grau alto">Alto</span></th><td>Análise de crédito na venda, piloto antes de crescer e monitoramento remoto do sistema, que mostra quando algo para de funcionar.</td></tr>
+        <tr><th scope="row">Distribuidora negar a conexão por inversão de fluxo<span class="grau medio">Médio</span></th><td>Focar em sistemas residenciais de até 7,5 kW, que a ANEEL dispensou dessa análise (REN 1.098/2024).</td></tr>
+        <tr><th scope="row">Concorrência de integradores e de empresas locais de assinatura solar<span class="grau medio">Médio</span></th><td>Diferenciar pela escala, pelo processo padronizado de instalação e pela oferta sem entrada.</td></tr>
       </tbody>
     </table>
     <div class="alertas">
-      <div><h3>A economia diminui com o tempo</h3><p>Pela Lei 14.300, a compensação da energia injetada cai ano a ano. A mensalidade precisa continuar menor que a conta que o cliente deixa de pagar.</p></div>
-      <div><h3>Retorno de longo prazo</h3><p>O sistema é da empresa por muitos anos. O caixa vem das mensalidades, não da venda, e o investidor deve esperar um retorno gradual.</p></div>
-      <div><h3>Tributos em transição</h3><p>Entre 2026 e 2033, a reforma tributária muda a tributação do consumo. Os contratos de aluguel devem ser planejados para esse período.</p></div>
+      <div data-reveal style="--d:0ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6l6 6 4-4 6 6"/><path d="M20 10v4h-4"/></svg><h3>A economia diminui com o tempo</h3><p>Pela Lei 14.300, a compensação da energia injetada cai ano a ano. A mensalidade precisa continuar menor que a conta que o cliente deixa de pagar.</p></div>
+      <div data-reveal style="--d:120ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Retorno de longo prazo</h3><p>O sistema é da empresa por muitos anos. O caixa vem das mensalidades, não da venda, e o investidor deve esperar um retorno gradual.</p></div>
+      <div data-reveal style="--d:240ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><h3>Tributos em transição</h3><p>Entre 2026 e 2033, a reforma tributária muda a tributação do consumo. Os contratos de aluguel devem ser planejados para esse período.</p></div>
     </div>
   </div>
 </section>
@@ -645,19 +702,19 @@ footer b{color:var(--tinta)}
 <!-- ENTREVISTA -->
 <section id="entrevista" aria-labelledby="t-entrevista">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-entrevista">Entrevista com um profissional do setor</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-entrevista" class="grad">Entrevista com um profissional do setor</h2>
       <p class="lead">Três minutos com quem trabalha com energia solar no Triângulo Mineiro, para testar os aspectos-chave da atividade econômica com quem vive o mercado.</p>
     </div>
     <div class="entrevista">
-      <div class="video" id="video">
+      <div class="video" id="video" data-reveal>
         <div class="aviso">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="5" width="14" height="14" rx="2.5"/><path d="M16.5 10l5-3v10l-5-3z"/></svg>
+          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5l12 7-12 7z"/></svg></div>
           <strong>Vídeo da entrevista</strong>
           <p>O vídeo será publicado aqui e exibido na apresentação de 17 de novembro.</p>
         </div>
       </div>
-      <div>
+      <div data-reveal style="--d:150ms">
         <p class="pergunta">Perguntas do roteiro, cerca de 30 segundos cada</p>
         <ol class="roteiro">
           <li>Como está o mercado de energia solar residencial em Uberlândia hoje?</li>
@@ -674,43 +731,43 @@ footer b{color:var(--tinta)}
 </section>
 
 <!-- CONCLUSÃO -->
-<section id="conclusao" class="conclusao" aria-labelledby="t-conclusao">
+<section id="conclusao" class="conclusao escura" aria-labelledby="t-conclusao">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-conclusao">Recomendamos investir na Enpal Brasil</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-conclusao" class="grad">Recomendamos investir na Enpal Brasil</h2>
       <p class="lead">A Enpal tem capital barato em grande escala e um processo industrializado para instalar e manter sistemas sem que o cliente invista na entrada. Uberlândia oferece renda, escala, logística e um estado líder em geração distribuída. A subsidiária própria protege o ativo e a qualidade que sustentam o modelo.</p>
     </div>
     <div class="condicoes">
-      <div><h3>Comece pelo piloto</h3><p>Residências e pequenos comércios do Triângulo, com metas de preço, inadimplência e tempo de instalação definidas antes de expandir.</p></div>
-      <div><h3>Financie em reais</h3><p>Parte da dívida em moeda local, para que o câmbio não corroa as mensalidades.</p></div>
-      <div><h3>Controle a operação</h3><p>Instalação, dados e relação com o cliente sob a subsidiária, com a academia formando a mão de obra local.</p></div>
+      <div data-reveal style="--d:0ms"><h3>Comece pelo piloto</h3><p>Residências e pequenos comércios do Triângulo, com metas de preço, inadimplência e tempo de instalação definidas antes de expandir.</p></div>
+      <div data-reveal style="--d:120ms"><h3>Financie em reais</h3><p>Parte da dívida em moeda local, para que o câmbio não corroa as mensalidades.</p></div>
+      <div data-reveal style="--d:240ms"><h3>Controle a operação</h3><p>Instalação, dados e relação com o cliente sob a subsidiária, com a academia formando a mão de obra local.</p></div>
     </div>
-    <div class="ods"><span><b>ODS 7</b> Energia limpa e acessível</span><span><b>ODS 13</b> Ação contra a mudança global do clima</span><span style="background:none;padding-left:0">Agenda 2030 da ONU</span></div>
+    <div class="ods" data-reveal><span>ODS 7, energia limpa e acessível</span><span>ODS 13, ação contra a mudança global do clima</span><span class="so">Agenda 2030 da ONU</span></div>
   </div>
 </section>
 
 <!-- IA -->
 <section id="ia" aria-labelledby="t-ia">
   <div class="casca">
-    <div class="cabeca">
-      <h2 id="t-ia">Como usamos inteligência artificial</h2>
+    <div class="cabeca" data-reveal>
+      <h2 id="t-ia" class="grad">Como usamos inteligência artificial</h2>
       <p class="lead">Seguindo as orientações da ESPM para uso de IA por discentes: a IA foi ferramenta, e as escolhas e a revisão foram do grupo.</p>
     </div>
-    <div class="ia-grade">
+    <div class="ia-grade" data-reveal>
       <div><h3>Organização</h3><p>O Claude (Anthropic) reuniu o material das etapas 1, 2 e 3 numa estrutura de site para o investidor, seção a seção.</p></div>
       <div><h3>Revisão de texto</h3><p>A IA sugeriu textos mais curtos e claros. O grupo aceitou, ajustou ou recusou cada sugestão.</p></div>
       <div><h3>Atualização de dados</h3><p>Com busca na web, a IA apontou dados mais recentes (Selic, potência solar, matriz elétrica). O grupo conferiu cada número na fonte citada.</p></div>
       <div><h3>Design e código</h3><p>O site foi programado com apoio do Claude Code e publicado gratuitamente no GitHub Pages.</p></div>
     </div>
-    <p style="color:var(--tinta-2);font-size:.95rem">A análise, as escolhas de cidade, setor e empresa e as recomendações são do grupo, construídas ao longo do semestre.</p>
+    <p class="suave" style="font-size:.95rem">A análise, as escolhas de cidade, setor e empresa e as recomendações são do grupo, construídas ao longo do semestre.</p>
   </div>
 </section>
 
 <!-- FONTES -->
 <section id="fontes" aria-labelledby="t-fontes">
   <div class="casca">
-    <div class="cabeca"><h2 id="t-fontes">Fontes</h2></div>
-    <ol class="fontes">
+    <div class="cabeca" data-reveal><h2 id="t-fontes" class="grad">Fontes</h2></div>
+    <ol class="fontes" data-reveal>
       <li>ABSOLAR. Infográfico do mercado solar brasileiro. <a href="https://www.absolar.org.br/mercado/infografico/" target="_blank" rel="noopener">absolar.org.br</a></li>
       <li>CANAL SOLAR. Energia solar no Brasil supera projeção. 2026. <a href="https://canalsolar.com.br/energia-solar-brasil-supera-projecao-internacional/" target="_blank" rel="noopener">canalsolar.com.br</a></li>
       <li>ANEEL. Resolução Normativa nº 1.000/2021. <a href="https://www2.aneel.gov.br/cedoc/ren20211000.pdf" target="_blank" rel="noopener">aneel.gov.br</a></li>
@@ -743,7 +800,7 @@ footer b{color:var(--tinta)}
   <div class="casca">
     <p><b>Projeto Brasil: o empreendimento estrangeiro</b><br>EL18, Brasil: Ambiente de Negócios. ESPM, 2026.2</p>
     <p><b>Grupo</b><br>Sérgio Rouco, Laura Marino, Isabella Cardoso, Lucas Guarany, Sabrina Rodrigues e Helena Holland</p>
-    <p>Trabalho acadêmico, sem vínculo com a Enpal.<br><button class="tema" id="tema" type="button">Alternar tema claro/escuro</button></p>
+    <p>Trabalho acadêmico, sem vínculo com a Enpal.</p>
   </div>
 </footer>
 
@@ -752,7 +809,9 @@ footer b{color:var(--tinta)}
 const VIDEO_YOUTUBE = "";
 
 (function(){
-  // Painel solar do topo: 8 x 5 células; uma passada de sol na carga da página
+  const reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Painel solar: 8 x 5 células; uma onda de luz na carga e depois células que acendem aos poucos
   const svg = document.getElementById('painel');
   const cols = 8, rows = 5, gap = 10, W = 800, H = 520;
   const cw = (W - gap*(cols-1))/cols, ch = (H - gap*(rows-1))/rows;
@@ -760,63 +819,110 @@ const VIDEO_YOUTUBE = "";
   const cells = [];
   for(let r=0;r<rows;r++){
     for(let c=0;c<cols;c++){
-      const g = document.createElementNS(ns,'g');
       const x = c*(cw+gap), y = r*(ch+gap);
       const rect = document.createElementNS(ns,'rect');
       rect.setAttribute('x',x); rect.setAttribute('y',y);
       rect.setAttribute('width',cw); rect.setAttribute('height',ch);
       rect.setAttribute('rx',6); rect.setAttribute('class','celula');
-      g.appendChild(rect);
-      for(let k=1;k<3;k++){ // barramentos da célula
+      svg.appendChild(rect);
+      for(let k=1;k<3;k++){
         const l = document.createElementNS(ns,'line');
         const lx = x + cw*k/3;
         l.setAttribute('x1',lx); l.setAttribute('x2',lx);
         l.setAttribute('y1',y+6); l.setAttribute('y2',y+ch-6);
-        l.setAttribute('stroke','rgba(255,255,255,.16)'); l.setAttribute('stroke-width','1.5');
-        g.appendChild(l);
+        l.setAttribute('stroke','rgba(255,255,255,.08)'); l.setAttribute('stroke-width','1.5');
+        svg.appendChild(l);
       }
-      svg.appendChild(g);
       cells.push({rect, d: c + (rows-1-r)});
     }
   }
-  const reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(reduz){
     cells.forEach(o=>{ if(o.d < 3) o.rect.classList.add('acesa'); });
   } else {
     cells.forEach(o=>{
-      setTimeout(()=>o.rect.classList.add('acesa'), 300 + o.d*110);
-      setTimeout(()=>{ if(o.d >= 3) o.rect.classList.remove('acesa'); }, 900 + o.d*110);
+      setTimeout(()=>o.rect.classList.add('acesa'), 700 + o.d*90);
+      setTimeout(()=>{ o.rect.classList.remove('acesa'); if(o.d < 3) o.rect.classList.add('acesa'); else if(o.d < 6) o.rect.classList.add('morna'); }, 1250 + o.d*90);
+    });
+    // depois, a cada 1,6 s uma célula acende (o painel "enchendo")
+    setTimeout(()=>{
+      const apagadas = ()=>cells.filter(o=>!o.rect.classList.contains('acesa'));
+      setInterval(()=>{
+        if(document.hidden) return;
+        let resto = apagadas();
+        if(!resto.length){ cells.forEach(o=>{ o.rect.classList.remove('acesa','morna'); if(o.d<3) o.rect.classList.add('acesa'); }); return; }
+        resto.sort((a,b)=>a.d-b.d);
+        const alvo = resto[Math.floor(Math.random()*Math.min(4,resto.length))];
+        alvo.rect.classList.remove('morna'); alvo.rect.classList.add('acesa');
+      }, 1600);
+    }, 4000);
+  }
+
+  // Revelar ao rolar
+  const vistos = new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(!e.isIntersecting) return;
+      e.target.classList.add('visto');
+      if(e.target.dataset.reveal !== undefined) contar(e.target);
+      vistos.unobserve(e.target);
+    });
+  },{rootMargin:'0px 0px -12% 0px', threshold:.08});
+  document.querySelectorAll('[data-reveal], #figura, #etapas').forEach(el=>{
+    if(reduz){ el.classList.add('visto'); } else vistos.observe(el);
+  });
+
+  // Contadores da ficha de Uberlândia
+  function contar(box){
+    box.querySelectorAll('[data-count]').forEach(el=>{
+      if(reduz || el.dataset.feito) return;
+      el.dataset.feito = 1;
+      const alvo = parseFloat(el.dataset.count), dec = +(el.dataset.dec||0);
+      const pre = el.dataset.pre||'', suf = el.dataset.suf||'';
+      const fmt = v => pre + v.toLocaleString('pt-BR',{minimumFractionDigits:dec,maximumFractionDigits:dec}) + suf;
+      const t0 = performance.now(), dur = 1600;
+      const passo = t=>{
+        const p = Math.min(1,(t-t0)/dur), e = 1 - Math.pow(1-p,4);
+        el.textContent = fmt(alvo*e);
+        if(p<1) requestAnimationFrame(passo); else el.textContent = fmt(alvo);
+      };
+      el.textContent = fmt(0);
+      requestAnimationFrame(passo);
     });
   }
 
   // Vídeo da entrevista
   if(VIDEO_YOUTUBE){
-    const box = document.getElementById('video');
-    box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/'+VIDEO_YOUTUBE+'" title="Entrevista com profissional do setor solar" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    document.getElementById('video').innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/'+VIDEO_YOUTUBE+'" title="Entrevista com profissional do setor solar" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
   }
 
-  // Seção ativa no menu
+  // Menu: seção ativa, cor sobre fundo escuro e barra de progresso
+  const topo = document.getElementById('topo');
+  const barra = document.getElementById('progresso');
   const links = [...document.querySelectorAll('.menu a')];
   const mapa = new Map(links.map(a=>[a.getAttribute('href').slice(1), a]));
-  const obs = new IntersectionObserver(es=>{
+  const ativo = new IntersectionObserver(es=>{
     es.forEach(e=>{
-      if(e.isIntersecting){
-        links.forEach(a=>a.removeAttribute('aria-current'));
-        const a = mapa.get(e.target.id);
-        if(a){ a.setAttribute('aria-current','true'); const m=a.parentElement; m.scrollTo({left:a.offsetLeft - m.clientWidth/2 + a.clientWidth/2, behavior: reduz?'auto':'smooth'}); }
-      }
+      if(!e.isIntersecting) return;
+      links.forEach(a=>a.removeAttribute('aria-current'));
+      const a = mapa.get(e.target.id);
+      if(a){ a.setAttribute('aria-current','true'); const m=a.parentElement; m.scrollTo({left:a.offsetLeft - m.clientWidth/2 + a.clientWidth/2, behavior: reduz?'auto':'smooth'}); }
     });
   },{rootMargin:'-45% 0px -50% 0px'});
-  mapa.forEach((a,id)=>{ const s=document.getElementById(id); if(s) obs.observe(s); });
+  mapa.forEach((a,id)=>{ const s=document.getElementById(id); if(s) ativo.observe(s); });
 
-  // Tema
-  const raiz = document.documentElement;
-  try{ const t = localStorage.getItem('tema'); if(t) raiz.dataset.theme = t; }catch(e){}
-  document.getElementById('tema').addEventListener('click',()=>{
-    const escuro = raiz.dataset.theme ? raiz.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-    raiz.dataset.theme = escuro ? 'light' : 'dark';
-    try{ localStorage.setItem('tema', raiz.dataset.theme); }catch(e){}
-  });
+  const escuras = [...document.querySelectorAll('.escura')];
+  let pendente = false;
+  function aoRolar(){
+    pendente = false;
+    const h = document.documentElement;
+    barra.style.transform = 'scaleX(' + (h.scrollTop/(h.scrollHeight-h.clientHeight||1)) + ')';
+    const y = topo.offsetHeight + 2;
+    const sobre = escuras.some(s=>{ const r=s.getBoundingClientRect(); return r.top<=y && r.bottom>=y; });
+    topo.classList.toggle('sobre-escuro', sobre);
+    if(h.scrollTop < document.getElementById('resumo').offsetTop - innerHeight*.5) links.forEach(a=>a.removeAttribute('aria-current'));
+    topo.style.setProperty('--icone', sobre ? '#000' : '#fff');
+  }
+  addEventListener('scroll',()=>{ if(!pendente){ pendente=true; requestAnimationFrame(aoRolar); } },{passive:true});
+  aoRolar();
 })();
 </script>
 </body>
